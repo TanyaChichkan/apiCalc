@@ -1,0 +1,28 @@
+.wrapper {
+  display: none;
+}
+
+.wrapper.active{
+  display: block;
+}
+
+h3 {
+  display: none;
+}
+
+.visible-block {
+  display: block;
+}
+
+h3.is-visible{
+  display: block;
+}
+
+.calc-date{
+  display: none;
+}
+
+.calc-date.active{
+  display: block;
+}
+

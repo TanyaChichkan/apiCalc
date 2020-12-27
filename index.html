@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./api.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+    <nav class="page-nav">
+      <ul class="navigation">
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-index = "0">Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-index = "1">Latest rates</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-index = "2">Historical rates</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+  <main>
+    <div class="container">
+    <div class="content-container">
+
+      <div class="wrapper" data-index="0">
+        <h3 class="section-title visible-block" >
+          Currency converter
+        </h3>
+
+        <div class="radio-buttons">
+
+          <label for="current-date">Today</label>
+          <input id="current-date" type="radio" class="radio-group" name="radio"/>
+
+          <label for="selected-date">Choose a date</label>
+          <input id="selected-date" type="radio" class="radio-group" name="radio"/>
+          <input type = "date" class = "calc-date">
+        </div>
+
+        <div class="select-container">
+        <div class="select1-currency">
+          <label for="amount">Amount</label>
+
+          <input type="number" min=0 id = "amount" class="amount-input" data-amount = "1">
+          <label for="currency">Currency name</label>
+
+          <select id="currency" name="currency" data-select = "0">
+            <option value="0" disabled = "disabled" selected = "selected">Choose currency</option>
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CFH">CFH</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="ZAR">ZAR</option>
+          </select>
+        </div>
+
+        <div class="select2-currency">
+          <label for="amount">Amount</label>
+          <input type="number" min=0 id="amount" class="amount-input" data-amount = "2">
+          <label for="currency1">Currency name</label>
+          <select id="currency1" name="currency1" value = "0" data-select = "1">
+            <option value="0" disabled = "disabled" selected = "selected">Choose currency</option>
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CFH">CFH</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="ZAR">ZAR</option>
+          </select>
+        </div>
+      </div>
+
+        <div class="text-wrapper">
+          <p class="text"></p>
+        </div>
+
+        <button type = "button">Reset data</button>
+      </div>
+
+      <div class="wrapper" data-index="1">
+        <h3 class="section-title">
+          All currencies quoted against the dollar </br>
+            Dollar foreign exchange reference rates:
+            <span class="date" data-date = "1"></span>
+        </h3>
+        <table class="table" data-table="1"></table>
+      </div>
+
+      <div class="wrapper" data-index="2">
+        <input type="date" class="input-date" data-item = "1">
+        <h3 class="section-title">
+          All currencies quoted against the dollar </br>
+            Dollar foreign exchange reference rates:
+            <span class="date" data-date = "2"></span>
+        </h3>
+        <table class="table" data-table="2"></table>
+
+      </div>
+
+
+    </div>
+    </div>
+  </main>
+
+  <script src="./api.js" type="module"></script>
+</body>
+</html>
